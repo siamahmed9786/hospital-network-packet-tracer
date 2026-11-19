@@ -1,0 +1,723 @@
+MLOCS-sw
+Current configuration : 3603 bytes
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname MLOCS-SW
+!
+enable password 7 0822455D0A16
+!
+!
+!
+no ip domain-lookup
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/4
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/5
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/8
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/9
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/10
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/11
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/12
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/13
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/14
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/15
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/16
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/17
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/18
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/19
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/20
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/21
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/22
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/23
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/24
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+banner motd ^CNo Unauthorised Acess!!!^C
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+!
+!
+!
+end
+hostname HQ-MultilayerSW
+!
+!
+no profinet
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+no ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+username admin password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+ip domain-name cisco.net
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ no switchport
+ ip address 192.168.102.81 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/0/2
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/4
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/5
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/6
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 0090.2167.7501
+ ip address 192.168.100.1 255.255.255.192
+ ip helper-address 192.168.102.67
+!
+interface Vlan20
+ mac-address 0090.2167.7502
+ ip address 192.168.100.65 255.255.255.192
+ ip helper-address 192.168.102.67
+!
+interface Vlan30
+ mac-address 0090.2167.7503
+ ip address 192.168.100.129 255.255.255.192
+ ip helper-address 192.168.102.67
+!
+interface Vlan40
+ mac-address 0090.2167.7504
+ ip address 192.168.100.193 255.255.255.192
+ ip helper-address 192.168.102.67
+!
+interface Vlan50
+ mac-address 0090.2167.7505
+ ip address 192.168.101.1 255.255.255.192
+ ip helper-address 192.168.102.67
+!
+interface Vlan60
+ mac-address 0090.2167.7506
+ ip address 192.168.101.65 255.255.255.192
+ ip helper-address 192.168.102.67
+!
+router ospf 10
+ log-adjacency-changes
+ network 192.168.100.0 0.0.0.63 area 0
+ network 192.168.100.64 0.0.0.63 area 0
+ network 192.168.100.128 0.0.0.63 area 0
+ network 192.168.100.192 0.0.0.63 area 0
+ network 192.168.101.0 0.0.0.63 area 0
+ network 192.168.101.64 0.0.0.63 area 0
+ network 192.168.102.80 0.0.0.3 area 0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 192.168.102.82 
+!
+ip flow-export version 9
+!
+!
+!
+banner motd ^CNo Unauthorised Access!!!^C
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+hostname BR-MultilayerSW1
+!
+!
+no profinet
+enable password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+no ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+username admin password 7 0822455D0A16
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+ip domain-name cisco.net
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ no switchport
+ ip address 192.168.102.93 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/0/2
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/4
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/5
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/6
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan80
+ mac-address 0002.175a.3d01
+ ip address 192.168.101.129 255.255.255.224
+ ip helper-address 192.168.102.67
+!
+interface Vlan90
+ mac-address 0002.175a.3d02
+ ip address 192.168.101.161 255.255.255.224
+ ip helper-address 192.168.102.67
+!
+interface Vlan100
+ mac-address 0002.175a.3d03
+ ip address 192.168.101.193 255.255.255.224
+ ip helper-address 192.168.102.67
+!
+interface Vlan110
+ mac-address 0002.175a.3d04
+ ip address 192.168.101.225 255.255.255.224
+ ip helper-address 192.168.102.67
+!
+interface Vlan120
+ mac-address 0002.175a.3d05
+ ip address 192.168.102.1 255.255.255.224
+ ip helper-address 192.168.102.67
+!
+interface Vlan130
+ mac-address 0002.175a.3d06
+ ip address 192.168.102.33 255.255.255.224
+ ip helper-address 192.168.102.67
+!
+router ospf 10
+ log-adjacency-changes
+ network 192.168.101.128 0.0.0.31 area 0
+ network 192.168.101.160 0.0.0.31 area 0
+ network 192.168.101.192 0.0.0.31 area 0
+ network 192.168.101.224 0.0.0.31 area 0
+ network 192.168.102.0 0.0.0.31 area 0
+ network 192.168.102.32 0.0.0.31 area 0
+ network 192.168.102.92 0.0.0.3 area 0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 192.168.102.94 
+!
+ip flow-export version 9
+!
+!
+!
+banner motd ^CNo Unauthorised Access!!!^C
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+hostname SSS-SW
+!
+enable password 7 0822455D0A16
+!
+!
+!
+no ip domain-lookup
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security mac-address sticky 0060.3E10.7A80
+!
+interface FastEthernet0/4
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security mac-address sticky 00E0.B0B7.4139
+!
+interface FastEthernet0/5
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security mac-address sticky 0001.97E6.057D
+!
+interface FastEthernet0/6
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security mac-address sticky 0060.3E07.DB57
+!
+interface FastEthernet0/7
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security mac-address sticky 0007.EC4B.3A48
+!
+interface FastEthernet0/8
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/9
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/10
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/11
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/12
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/13
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/14
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/15
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/16
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/17
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/18
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/19
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/20
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/21
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/22
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/23
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface FastEthernet0/24
+ switchport access vlan 70
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+banner motd ^CNo Unauthorised Access!!!^C
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+!
+!
+!
+end
